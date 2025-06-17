@@ -19,7 +19,7 @@ A modern and elegant website designed to present and promote the sale of a luxur
 
 - **HTML5** – Semantic structure and content
 - **CSS3** – Custom styling and layout
-- **Bootstrap 5** – Responsive grid and components
+- **Tailwind** – Responsive grid and components
 - **JavaScript (Vanilla)** – Interactivity and animations
 
 ---
