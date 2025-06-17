@@ -21,7 +21,6 @@ A modern and elegant website designed to present and promote the sale of a luxur
 - **CSS3** – Custom styling and layout
 - **Bootstrap 5** – Responsive grid and components
 - **JavaScript (Vanilla)** – Interactivity and animations
-- **jQuery** – DOM manipulation and UI effects
 
 ---
 
