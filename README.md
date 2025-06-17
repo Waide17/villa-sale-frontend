@@ -1,6 +1,6 @@
 # 🏡 Luxury Villa Showcase
 
-A modern and elegant website designed to present and promote the sale of a luxury villa. Built using HTML, CSS, JavaScript, and Tailwind the site focuses on high-quality visuals, responsive design, and an intuitive user experience.
+A modern and elegant website designed to present and promote the sale of a luxury villa. Built using HTML, CSS, JavaScript and Tailwind the site focuses on high-quality visuals, responsive design, and an intuitive user experience.
 
 ---
 
