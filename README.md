@@ -27,7 +27,7 @@ A modern and elegant website designed to present and promote the sale of a luxur
 
 ## 📁 Project Structure
 
-
+```bash
 luxury-villa-site/
 │
 ├── index.html # Main landing page
@@ -38,7 +38,7 @@ luxury-villa-site/
 ├── img/
 │ └── ... # Property images
 └── README.md # Project documentation
-
+```
 ---
 
 ## 🚀 Getting Started
