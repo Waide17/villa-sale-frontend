@@ -1,4 +1,29 @@
 /* Scroll snap container */
+body{
+    cursor: none;
+}
+
+:hover {
+    cursor: none;
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #facc15; /* oro */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3); /* per eleganza */
+  backdrop-filter: blur(2px);
+}
+
+
 .scroll-container {
     height: 100vh;
     overflow-y: scroll;
@@ -57,4 +82,20 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.text-shadow {
+  text-shadow: 1px 4px 0 #000;
+}
+
+.blur-background {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+::selection {
+  background-color: rgba(250, 204, 21, 0.7); /* giallo 400 con opacità */
+  color: #333; /* molto scuro */
 }
