@@ -38,6 +38,6 @@ hoverElements.forEach((el) => {
   el.addEventListener("mouseleave", () => {
     cursor.style.transform = "translate(-50%, -50%) scale(1)"
     cursor.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
-    cursor.style.border = "2px solid #facc15" 
+    cursor.style.border = "2px solid #facc15"
   })
 })
