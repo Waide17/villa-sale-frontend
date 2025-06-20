@@ -31,9 +31,13 @@ luxury-villa-site/
 │
 ├── index.html # Main landing page
 ├── css/
-│ └── style.css # Custom styles
+│ └── style.css # Custom general styles
+│ └── details.css # Styles of details pages
 ├── js/
 │ └── index.js # Custom scripts
+├── public/
+│ └── details_esterno.html # Page about the inside of the villa
+│ └── details_interni.html # Page about the outside of the villa 
 ├── img/
 │ └── ... # Property images
 └── README.md # Project documentation
