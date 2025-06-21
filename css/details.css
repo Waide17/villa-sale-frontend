@@ -23,14 +23,12 @@
     display: inline-flex;
 }
 
-
-.animate-marquee:hover, .animate-marquee-reverse:hover {
-    animation-play-state: paused;
-}
-
-
-
 .animate-marquee-reverse {
     animation: marquee-reverse 35s linear infinite;
     display: inline-flex;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+    animation-play-state: paused;
 }
