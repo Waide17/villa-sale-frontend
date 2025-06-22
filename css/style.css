@@ -3,6 +3,7 @@ body,
 html {
     cursor: none;
     overscroll-behavior: none;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -14,23 +15,23 @@ html {
 }
 
 #custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #facc15;
-    /* oro */
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.15s ease-out, opacity 0.15s ease-out;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.3);
-    /* per eleganza */
-    backdrop-filter: blur(2px);
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #facc15;
+  transition: transform 0.2s, background-color 0.2s, border 0.2s;
 }
 
+#custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.8);
+  background-color: #facc15;
+  border: 1px solid #f59e0b;
+}
 .scroll-container {
     height: 100vh;
     overflow-y: scroll;
@@ -150,8 +151,6 @@ section {
     transform: scaleX(0);
     transition: transform 0.4s ease-out;
 }
-
-
 
 .custom-hover::after {
     bottom: 0;

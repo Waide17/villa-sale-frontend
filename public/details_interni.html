@@ -13,6 +13,7 @@
 </head>
 
 <body class="bg-gradient-to-br from-gray-800 to-gray-700 text-white">
+    <div id="custom-cursor"></div>
     <nav class="border-gray-200 backdrop-blur-[15px] sticky top-0 z-50">
         <div class="max-w-screen-xl flex flex-wrap flex-row-reverse items-center justify-between mx-auto mr-4 p-4 pr-0">
             <button data-collapse-toggle="navbar-dropdown" type="button"
@@ -82,10 +83,9 @@
 
 
     <section class="bg-gradient-to-br from-gray-900 to-gray-800 py-7 flex items-center">
-
-        <div id="card" class="max-w-6xl mx-auto rounded-lg overflow-hidden shadow-lg ml-8 text-center delay-[100ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0"
+        <div class="custom-hover hover-target hover:scale-105 max-w-6xl mx-auto rounded-lg overflow-hidden shadow-lg ml-8 text-center delay-[100ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0"
             data-taos-offset="300">
-            <img src="../img/details/interno12.jpg" class="w-full h-full object-cover">
+            <img onclick="openFullscreen(this.src)" src="../img/details/interno12.jpg" class="w-full h-full object-cover">
         </div>
 
         <div class="max-w-6xl h-fit mx-auto px-8 text-center delay-[700ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0"
@@ -99,14 +99,18 @@
         </div>
     </section>
 
-    <section>
+    <section class="flex items-center bg-gradient-to-br from-gray-600 to-gray-900 py-7">
         <div class="max-w-6xl mx-auto px-8 text-center mb-16 delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0"
             data-taos-offset="300">
             <h2 class="text-5xl font-bold text-white mb-8">Appartamenti Indipendenti per Ogni Esigenza.</h2>
-            <p class="text-xl text-gray-300 leading-relaxed mb-8">
+            <p class="text-xl text-gray-300 leading-relaxed">
                 La proprietà è suddivisa in 5 appartamenti e 1 camera quadrupla, ciascuno con ingresso privato. Ideali
                 per famiglie, coppie o gruppi numerosi, offrono privacy e funzionalità.
             </p>
+        </div>
+        <div class="custom-hover hover-target hover:scale-105 max-w-6xl mx-auto rounded-lg overflow-hidden shadow-lg mr-8 text-center delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0"
+            data-taos-offset="150">
+            <img onclick="openFullscreen(this.src)" src="../img/details/interno2.jpg" class="w-full h-full object-cover">
         </div>
     </section>
 
@@ -116,36 +120,36 @@
             <!-- Riga 1: scorre verso sinistra -->
             <div class="whitespace-nowrap animate-marquee" data-taos-offset="400">
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno1.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno1.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno2.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno2.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno3.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno3.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno8.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno8.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno9.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno9.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno12.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno12.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno13.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno13.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno14.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno14.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
 
@@ -153,36 +157,36 @@
                 <!-- Duplicati per effetto di scorrimento infinito -->
 
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno1.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno1.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno2.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno2.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno3.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno3.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno8.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno8.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno9.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno9.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno12.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno12.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno13.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno13.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno14.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno14.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
             </div>
@@ -190,70 +194,70 @@
             <!-- Riga 2: scorre verso destra -->
             <div class="whitespace-nowrap animate-marquee-reverse mt-6">
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno4.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno4.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno5.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno5.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno6.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno6.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno7.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno7.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno10.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno10.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno11.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno11.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno15.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno15.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno16.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno16.jpg" class="w-full h-full object-cover" alt="">
                 </div>
 
                 <!-- Duplicati per effetto di scorrimento infinito -->
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno4.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno4.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno5.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno5.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno6.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno6.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno7.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno7.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno10.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno10.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno11.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno11.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno15.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno15.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <div
-                    class="w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
-                    <img src="../img/details/interno16.jpg" class="w-full h-full object-cover" alt="">
+                    class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg transform transition-transform hover:scale-105 mx-2">
+                    <img onclick="openFullscreen(this.src)" src="../img/details/interno16.jpg" class="w-full h-full object-cover" alt="">
                 </div>
             </div>
         </div>
@@ -270,10 +274,14 @@
         </div>
     </section>
 
-    <div id="custom-cursor"></div>
+    <div id="imageModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden"
+        onclick="closeFullscreen()">
+        <img id="modalImage" src="" class="max-w-full max-h-full rounded-lg shadow-xl transition duration-300" />
+    </div>
+
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
-    <!-- <script src="../js/details_interni.js"></script> -->
     <script src="../js/index.js"></script>
+    <script src="../js/details_interni.js"></script>
 </body>
 
 </html>
