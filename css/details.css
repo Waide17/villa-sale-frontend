@@ -19,12 +19,12 @@
 }
 
 .animate-marquee {
-    animation: marquee 35s linear infinite;
+    animation: marquee 50s linear infinite;
     display: inline-flex;
 }
 
 .animate-marquee-reverse {
-    animation: marquee-reverse 35s linear infinite;
+    animation: marquee-reverse 50s linear infinite;
     display: inline-flex;
 }
 
