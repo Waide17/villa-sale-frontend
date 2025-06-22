@@ -45,22 +45,22 @@ hoverElements.forEach((el) => {
 });
 
 // Gestione speciale per il dropdown
-const dropdownButton = document.getElementById("dropdownNavbarLink");
-const dropdownMenu = document.getElementById("dropdownNavbar");
+// const dropdownButton = document.getElementById("dropdownNavbarLink");
+// const dropdownMenu = document.getElementById("dropdownNavbar");
 
-if (dropdownButton && dropdownMenu) {
-  dropdownButton.addEventListener("mouseenter", () => {
-    cursor.classList.add("hover");
-  });
+// if (dropdownButton && dropdownMenu) {
+//   dropdownButton.addEventListener("mouseenter", () => {
+//     cursor.classList.add("hover");
+//   });
 
-  dropdownMenu.addEventListener("mouseenter", () => {
-    cursor.classList.add("hover");
-  });
+//   dropdownMenu.addEventListener("mouseenter", () => {
+//     cursor.classList.add("hover");
+//   });
 
-  dropdownMenu.addEventListener("mouseleave", () => {
-    cursor.classList.remove("hover");
-  });
-}
+//   dropdownMenu.addEventListener("mouseleave", () => {
+//     cursor.classList.remove("hover");
+//   });
+// }
 
 // var swiper = new Swiper(".centered-slide-carousel", {
 //   centeredSlides: true,
