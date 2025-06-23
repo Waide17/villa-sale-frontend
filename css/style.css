@@ -15,23 +15,24 @@ html {
 }
 
 #custom-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.3);
-  border: 2px solid #facc15;
-  transition: transform 0.2s, background-color 0.2s, border 0.2s;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid #facc15;
+    transition: transform 0.2s, background-color 0.2s, border 0.2s;
 }
 
 #custom-cursor.hover {
-  transform: translate(-50%, -50%) scale(1.8);
-  background-color: #facc15;
-  border: 1px solid #f59e0b;
+    transform: translate(-50%, -50%) scale(1.8);
+    background-color: #facc15;
+    border: 1px solid #f59e0b;
 }
+
 .scroll-container {
     height: 100vh;
     overflow-y: scroll;

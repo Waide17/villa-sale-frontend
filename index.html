@@ -19,9 +19,14 @@
             </div>
         </div>
         <!-- Sezione Hero -->
-        <section class="snap-section bg-[url('img/landing_image.png')] bg-cover bg-center relative">
-            <div
-                class="text-center text-white px-8 bg-opacity-50 bg-black absolute inset-0 flex flex-col items-center justify-center">
+        <section class="snap-section relative overflow-hidden min-h-[600px]">
+            <!-- Video background -->
+            <video class="absolute inset-0 w-full h-full object-cover z-0"
+                src="media/videos/video_panoramico_generale.mp4" autoplay muted loop playsinline></video>
+            <!-- Overlay for darkening and content readability -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+            <!-- Content -->
+            <div class="text-center text-white px-8 absolute inset-0 flex flex-col items-center justify-center z-20">
                 <h1 id="main-title"
                     class="text-8xl font-bold mb-11 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent glow-text delay-[300ms] duration-[600ms] taos:scale-[1.2] taos:opacity-0"
                     data-taos-offset="400">
@@ -30,7 +35,7 @@
                     <p class="text-3xl text-[#FFFFFF]">Scopri la casa dei tuoi sogni.</p>
                 </span>
             </div>
-            <div class="text-lg text-[#FFFFFF] animate-bounce absolute bottom-8">
+            <div class="text-lg text-[#FFFFFF] animate-bounce absolute bottom-8 left-0 right-0 text-center z-20">
                 Scorri per esplorare ↓
             </div>
         </section>

@@ -19,30 +19,30 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => observer.observe(section))
 
 // Gestione del cursore personalizzato
-const cursor = document.getElementById("custom-cursor");
+const cursor = document.getElementById("custom-cursor")
 
 // Nascondi il cursore di default per tutto il documento
-document.body.style.cursor = "none";
+document.body.style.cursor = "none"
 
 document.addEventListener("mousemove", (e) => {
-  cursor.style.top = `${e.clientY}px`;
-  cursor.style.left = `${e.clientX}px`;
-});
+  cursor.style.top = `${e.clientY}px`
+  cursor.style.left = `${e.clientX}px`
+})
 
 // Elementi che attivano l'hover
 const hoverElements = document.querySelectorAll(
   "button, a, .hover-target, ul, li, .dropdown, .dropdown *"
-);
+)
 
 hoverElements.forEach((el) => {
   el.addEventListener("mouseenter", () => {
-    cursor.classList.add("hover");
-  });
-  
+    cursor.classList.add("hover")
+  })
+
   el.addEventListener("mouseleave", () => {
-    cursor.classList.remove("hover");
-  });
-});
+    cursor.classList.remove("hover")
+  })
+})
 
 // Gestione speciale per il dropdown
 // const dropdownButton = document.getElementById("dropdownNavbarLink");

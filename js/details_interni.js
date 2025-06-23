@@ -12,7 +12,7 @@ function closeFullscreen() {
 
 document.addEventListener("keydown", (event) => {
   if (event.code === "Space") {
-    preventDefault();
+    preventDefault()
     const allImages = document.querySelectorAll("img")
 
     let bestImage = null
