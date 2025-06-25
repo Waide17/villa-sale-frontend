@@ -37,3 +37,7 @@ body {
 .animate-marquee-reverse:hover {
     animation-play-state: paused;
 }
+
+.max-w-42rem {
+    max-width: 42rem;
+}

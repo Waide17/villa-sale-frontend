@@ -3,13 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- The 'js' class is now added via external JS in ../js/index.js -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'interno della villa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/details.css">
-    <script>document.documentElement.classList.add('js')</script>
+    <style>
+        /* Marquee animation for infinite scroll */
+        .marquee,
+        .marquee-reverse {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            animation: marquee 32s linear infinite;
+        }
+
+        .marquee-reverse .marquee-content {
+            animation: marquee-reverse 32s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marquee-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-to-br from-gray-800 to-gray-700 text-white">
@@ -28,7 +65,7 @@
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
                 <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg 0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
                     <li>
                         <a href="../index.html"
                             class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
@@ -78,20 +115,21 @@
         </div>
     </nav>
 
-    <h1 class="text-8xl text-center font-bold my-16 pb-3 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent glow-text delay-[300ms] duration-[600ms] taos:scale-[1.2] taos:opacity-0"
-        data-taos-offset="400">Interni raffinati</h1>
+    <h1 class="text-8xl text-center font-bold my-16 pb-3 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent 
+    glow-text delay-[300ms] duration-[600ms] taos:scale-[1.2] taos:opacity-0" data-taos-offset="400">Interni raffinati
+    </h1>
 
 
-    <section class="bg-gradient-to-br from-gray-900 to-gray-800 py-7 py-7 flex items-center">
+    <section class="bg-gradient-to-br from-gray-900 to-gray-800 py-7 flex items-center">
         <div
-            class="w-[800px] h-[520px] min-w-[800px] min-h-[520px] max-w-[800px] max-h-[520px] custom-hover hover-target hover:scale-105 max-w-6xl mx-auto rounded-lg overflow-hidden ml-8 delay-[700ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0">
-            <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno17.jpg"
+            class="custom-hover hover-target hover:scale-105 max-w-6xl mx-auto rounded-lg overflow-hidden ml-8 text-center delay-[700ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0">
+            <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno17.webp"
                 class="w-full h-full object-cover shadow-lg" alt="Vista esterna della villa con piscina e giardino">
         </div>
 
         <div
-            class="max-w-6xl mx-auto px-8 text-center mb-16 delay-[100ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 ">
-            <h2 class="text-5xl font-bold glow-text mb-8 pb-3">La Casa Principale.</h2>
+            class="max-w-42rem mx-auto px-8 text-center mb-16 delay-[100ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0 ">
+            <h2 class="text-5xl font-bold glow-text mb-8 pb-3">La Struttura Principale.</h2>
             <p class="text-xl text-gray-300 leading-relaxed">
                 La villa dispone di un attico panoramico per 6 persone con vista sulla piscina, un appartamento family
                 per 4 ospiti al primo piano e due bilocali indipendenti al piano terra, perfetti per coppie con un
@@ -108,7 +146,7 @@
         </div>
         <div
             class="custom-hover hover-target hover:scale-105 max-w-6xl mx-auto rounded-lg overflow-hidden mr-8 text-center">
-            <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno2.jpg"
+            <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno2.webp"
                 class="w-full h-full object-cover shadow-lg"
                 alt="Sala da pranzo con tavolo in legno e travi di legno in vista">
         </div>
@@ -118,99 +156,108 @@
     <section class="select-none">
         <div class="overflow-hidden py-6">
             <!-- Riga 1: scorre verso sinistra -->
-            <div class="whitespace-nowrap animate-marquee" data-taos-offset="400">
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno1.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Camera da letto con due letti singoli" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno2.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Sala da pranzo con tavolo in legno e travi di legno in vista" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno3.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Bagno" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno8.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Sala da pranzo con grandi tavolate" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno9.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Cucina professionale con elettrodomestici" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno12.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Stanza della villa con divanetto nero" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno13.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Cucina con elettrodomestici moderni e camino" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno14.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Camera da letto con letto matrimoniale e letti a castello" loading="lazy">
+            <div class="marquee whitespace-nowrap" data-taos-offset="400">
+                <div class="marquee-content inline-flex">
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno1.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Camera da letto con due letti singoli" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno2.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Sala da pranzo con tavolo in legno e travi di legno in vista" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno3.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Bagno" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno8.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Sala da pranzo con grandi tavolate" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno9.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Cucina professionale con elettrodomestici" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno17.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Stanza della villa con divanetto nero" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno15.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Cucina con elettrodomestici moderni e camino" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno14.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Camera da letto con letto matrimoniale e letti a castello" loading="lazy">
+                    </div>
                 </div>
             </div>
 
             <!-- Riga 2: scorre verso destra -->
-            <div class="whitespace-nowrap animate-marquee-reverse mt-6">
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno4.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Camera da letto con letto matrimoniale" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno5.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Cucina con camino" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno6.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Cucina professionale con elettrodomestici" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno7.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Sala da pranzo comune" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno10.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Camera da letto con letto matrimoniale" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno11.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Camera da letto con letto matrimoniale" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno15.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Camera da letto con letto matrimoniale" loading="lazy">
-                </div>
-                <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
-                    <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno16.jpg"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
-                        alt="Cucina con arredamento in legno" loading="lazy">
+            <div class="marquee marquee-reverse whitespace-nowrap mt-6">
+                <div class="marquee-content inline-flex">
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno4.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Camera da letto con letto matrimoniale" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno5.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Cucina con camino" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno6.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Cucina professionale con elettrodomestici" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno7.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Sala da pranzo comune" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno10.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Camera da letto con letto matrimoniale" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno11.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Camera da letto con letto matrimoniale" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno12.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Camera da letto con letto matrimoniale" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno13.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Camera da letto con letto matrimoniale" loading="lazy">
+                    </div>
+                    <div class="hover-target w-[350px] h-[250px] overflow-hidden rounded-2xl shadow-lg mx-2 group">
+                        <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno16.webp"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            alt="Cucina con arredamento in legno" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="bg-gradient-to-br from-gray-900 to-gray-800 py-7 flex items-center">
-        <div class="custom-hover hover-target hover:scale-105 max-w-6xl mx-auto rounded-lg overflow-hidden ml-8 text-center"
-            data-taos-offset="300">
-            <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno12.jpg"
+        <div
+            class="custom-hover hover-target hover:scale-105 max-w-6xl mx-auto rounded-lg overflow-hidden ml-8 text-center">
+            <img onclick="openFullscreen(this.src)" src="../media/details_interni/interno12.webp"
                 class="w-full h-full object-cover shadow-lg" alt="Stanza della villa con divanetto nero">
         </div>
 
@@ -257,16 +304,24 @@
     </div>
 
     <script>
-        document.querySelectorAll('.animate-marquee, .animate-marquee-reverse').forEach(function (carousel) {
-            const items = Array.from(carousel.children);
-            items.forEach(item => {
-                carousel.appendChild(item.cloneNode(true));
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.marquee-content').forEach(function (content) {
+                // Only duplicate if not already duplicated
+                if (!content.dataset.duplicated) {
+                    const items = Array.from(content.children);
+                    items.forEach(item => {
+                        content.appendChild(item.cloneNode(true));
+                    });
+                    content.dataset.duplicated = "true";
+                }
             });
         });
     </script>
-    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="../js/details_interni.js"></script>
+
+    <!-- Removed JS cloning for performance; use CSS animation for infinite marquee effect -->
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js" defer></script>
+    <script src="../js/index.js" defer></script>
+    <script src="../js/details_interni.js" defer></script>
 </body>
 
 </html>
