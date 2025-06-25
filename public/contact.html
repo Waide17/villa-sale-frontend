@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-gradient-to-br from-gray-800 to-gray-700 text-white h-screen overflow-hidden">
+    <nav class="border-gray-200 backdrop-blur-[15px] sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap flex-row-reverse items-center justify-between mx-auto mr-4 p-4 pr-0">
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 
+                focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown"
+                aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg 0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+                    <li>
+                        <a href="../index.html"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-white md:p-0 md:w-auto dark:text-white md:dark:text-white">
+                            La villa
+                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                                aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="details_interni.html"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Esplora
+                                        gli
+                                        interni</a>
+                                </li>
+                                <li>
+                                    <a href="details_esterno.html"
+                                        class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white">Esplora
+                                        gli esterni</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            aria-disabled="true" tabindex="-1">Servizi</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            aria-disabled="true" tabindex="-1">Prezzi</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"
+                            class="flex items-center justify-between w-full py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-yellow-400 md:p-0 md:w-auto dark:text-white md:dark:text-yellow-400"
+                            aria-disabled="true" tabindex="-1">Contattaci</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-8xl text-center font-bold pb-3 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent 
+    glow-text delay-[300ms] duration-[600ms] taos:scale-[1.2] taos:opacity-0" data-taos-offset="400">Contattaci.</h1>
+
+    <h2 class="text-3xl text-center">Ti aiuteremo a pianificare il soggiorno perfetto.</h2>
+
+    <section class="overflow-scroll">
+        <div class="max-w-4xl mx-auto mt-10 p-6 bg-gray-800 rounded-lg shadow-lg">
+            <div class="flex justify-center gap-6 mb-8">
+                <button id="form-tab" class="px-6 py-2 rounded-lg bg-yellow-500 text-gray-900 font-semibold
+                    focus:outline-none focus:ring-2 focus:ring-yellow-400
+                    hover:ring-4 hover:ring-yellow-400 transition" onclick="showFormSection('form')">Contattaci
+                    tu</button>
+                <button id="map-tab" class="px-6 py-2 rounded-lg bg-gray-700 text-gray-200 font-semibold
+                    focus:outline-none focus:ring-2 focus:ring-yellow-400
+                    hover:ring-4 hover:ring-yellow-400 transition" onclick="showFormSection('map')">Dove
+                    trovarci</button>
+            </div>
+            <div id="form-section">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300">Nome</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full p-2 bg-gray-700 border border-gray-600 rounded-md 
+                        focus:ring-yellow-500 focus:outline-none focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label for="last-name" class="block text-sm font-medium text-gray-300">Cognome</label>
+                        <input type="text" id="last-name" name="last-name" class="mt-1 block w-full p-2 bg-gray-700 border border-gray-600 rounded-md 
+                        focus:ring-yellow-500 focus:outline-none focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full p-2 bg-gray-700 border border-gray-600 rounded-md 
+                        focus:ring-yellow-500 focus:outline-none focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-300">Telefono</label>
+                        <input type="tel" id="phone" name="phone" class="mt-1 block w-full p-2 bg-gray-700 border border-gray-600 rounded-md 
+                        focus:ring-yellow-500 focus:outline-none focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300">Messaggio</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-2 bg-gray-700 border border-gray-600 rounded-md 
+                        focus:ring-yellow-500 focus:outline-none focus:border-yellow-500"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-md transition duration-200">Invia</button>
+                </form>
+            </div>
+            <div id="map-section" class="hidden">
+                <!-- Replace this with your map or address info -->
+                <div class="text-center text-gray-300">
+                    <p>Via Fonte Vecchia, 7<br>Chiusi della Verna (AR)</p>
+                    <div class="maps p-[5%] bg-gray-700 rounded-lg shadow-lg mt-6 w-fit m-auto">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.6313937629075!2d11.983947226037781!3d43.641153029380504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132b86741cb21b01%3A0x344513d1fe0a60d6!2s52033%20Caprese%20Michelangelo%20AR!5e0!3m2!1sit!2sit!4v1750332431560!5m2!1sit!2sit"
+                            width="550" height="350" style="border:0;" allowfullscreen="true" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="custom-cursor"></div>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
