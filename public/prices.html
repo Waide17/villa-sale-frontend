@@ -84,43 +84,44 @@
         </div>
     </nav>
 
-    <h1 class="text-8xl text-center font-bold mb-16 pb-3 
-    bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent 
-    glow-text delay-[300ms] duration-[600ms] taos:scale-[1.2] taos:opacity-0" data-taos-offset="400">Prezzi e Servizi
-    </h1>
-
-    <section class="flex flex-row flex-wrap items-center justify-center h-[500px] gap-8">
-        <div class="max-w-lg w-full md:w-1/4 h-full ml-auto p-4 bg-gray-900 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold mb-4 text-center">Il prezzo di affitto include</h3>
-            <p class="text-lg mb-4">Scopri le nostre tariffe competitive per il soggiorno nella villa.</p>
-            <ul class="list-disc list-inside">
-                <li>Stagione alta: €2000 a notte</li>
-                <li>Stagione bassa: €1500 a notte</li>
-                <li>Pacchetto settimanale: €10,000</li>
-            </ul>
-        </div>
-        <div class="max-w-lg w-full md:w-1/4 h-full p-4 bg-gray-900 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold mb-4 text-center">Il prezzo di affitto non include</h3>
-            <p class="text-lg mb-4">Scopri le nostre tariffe competitive per il soggiorno nella villa.</p>
-            <ul class="list-disc list-inside">
-                <li>Stagione alta: €2000 a notte</li>
-                <li>Stagione bassa: €1500 a notte</li>
-                <li>Pacchetto settimanale: €10,000</li>
-            </ul>
-        </div>
-        <div class="max-w-lg w-full md:w-1/4 h-full mr-auto p-4 bg-gray-900 rounded-lg shadow-lg">
-            <h3 class="text-2xl font-bold mb-4 text-center">Altre informazioni</h3>
-            <p class="text-lg mb-4">Scopri le nostre tariffe competitive per il soggiorno nella villa.</p>
-            <ul class="list-disc list-inside">
-                <li>Stagione alta: €2000 a notte</li>
-                <li>Stagione bassa: €1500 a notte</li>
-                <li>Pacchetto settimanale: €10,000</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="max-w-screen-xl mx-auto bg-gray-800 rounded-lg shadow-lg my-16">
-        <div class="max-w-[100%] p-8 bg-gray-800 rounded-lg shadow-lg my-16">
+    <div class="flex flex-col items-center justify-centern">
+        <h1 class="text-8xl text-center font-bold mb-16 pb-3
+        bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent
+        glow-text delay-[300ms] duration-[600ms] taos:scale-[1.2] taos:opacity-0" data-taos-offset="400">Prezzi e
+            Servizi
+        </h1>
+        <section class="flex flex-row flex-wrap items-center justify-center h-[500px] gap-8">
+            <div class="max-w-lg w-full md:w-1/4 h-full ml-auto p-4 bg-gray-900 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4 text-center">Il prezzo di affitto include</h3>
+                <p class="text-lg mb-4">Scopri le nostre tariffe competitive per il soggiorno nella villa.</p>
+                <ul class="list-disc list-inside">
+                    <li>Stagione alta: €2000 a notte</li>
+                    <li>Stagione bassa: €1500 a notte</li>
+                    <li>Pacchetto settimanale: €10,000</li>
+                </ul>
+            </div>
+            <div class="max-w-lg w-full md:w-1/4 h-full p-4 bg-gray-900 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4 text-center">Il prezzo di affitto non include</h3>
+                <p class="text-lg mb-4">Scopri le nostre tariffe competitive per il soggiorno nella villa.</p>
+                <ul class="list-disc list-inside">
+                    <li>Stagione alta: €2000 a notte</li>
+                    <li>Stagione bassa: €1500 a notte</li>
+                    <li>Pacchetto settimanale: €10,000</li>
+                </ul>
+            </div>
+            <div class="max-w-lg w-full md:w-1/4 h-full mr-auto p-4 bg-gray-900 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4 text-center">Altre informazioni</h3>
+                <p class="text-lg mb-4">Scopri le nostre tariffe competitive per il soggiorno nella villa.</p>
+                <ul class="list-disc list-inside">
+                    <li>Stagione alta: €2000 a notte</li>
+                    <li>Stagione bassa: €1500 a notte</li>
+                    <li>Pacchetto settimanale: €10,000</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <section class="max-w-screen-xl bg-gray-800 rounded-lg shadow-lg my-16 flex justify-center mx-auto">
+        <div class="max-w-[100%] p-8 bg-gray-800 rounded-lg shadow-lg">
             <h2 class="text-3xl font-bold mb-6 text-center">Servizi inclusi</h2>
             <ul class="list-disc list-inside text-lg">
                 <li>Wi-Fi gratuito in tutta la villa</li>
@@ -132,6 +133,7 @@
         </div>
     </section>
 
+    <!-- Defer: il caricamento degli script avviene dopo il caricamento del DOM -->
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js" defer></script>
     <script src="../js/index.js" defer></script>
 </body>

@@ -310,7 +310,10 @@
                 if (!content.dataset.duplicated) {
                     const items = Array.from(content.children);
                     items.forEach(item => {
-                        content.appendChild(item.cloneNode(true));
+                        const clone = item.cloneNode(true);
+                        const img = item.querySelector('img');
+                        if (img) img.classList.add('hover-target');
+                        content.appendChild(clone)
                     });
                     content.dataset.duplicated = "true";
                 }
