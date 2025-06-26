@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (e) => {
     let valid = true
-    let messages = []
 
     // Example fields: name, email, message
     const name = form.querySelector('[name="name"]')
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Message validation
     if (!message.value.trim()) {
       valid = false
-      messages.push("Messaggio obbligatorio.")
       document.getElementById("message").classList.add("error")
       message.focus()
     } else {
@@ -26,12 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Phone validation
     if (!phone.value.trim()) {
       valid = false
-      messages.push("Numero di telefono obbligatorio.")
       document.getElementById("phone").classList.add("error")
       document.getElementById("phone").focus()
     } else if (!/^\+?[0-9\s]+$/.test(phone.value)) {
       valid = false
-      messages.push("Per favore inserisci un numero di telefono valido.")
       document.getElementById("phone").classList.add("error")
       document.getElementById("phone").focus()
     } else {
@@ -41,12 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Email validation
     if (!email.value.trim()) {
       valid = false
-      messages.push("Email obbligatoria.")
       document.getElementById("email").classList.add("error")
       document.getElementById("email").focus()
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
       valid = false
-      messages.push("Per favore inserisci un indirizzo email valido.")
       document.getElementById("email").classList.add("error")
       document.getElementById("email").focus()
     } else {
@@ -56,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Last name validation
     if (!last_name.value.trim()) {
       valid = false
-      messages.push("Cognome obbligatorio.")
       document.getElementById("last-name").classList.add("error")
       document.getElementById("last-name").focus()
     } else {
@@ -66,22 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Name validation
     if (!name.value.trim()) {
       valid = false
-      messages.push("Nome obligatorio.")
       document.getElementById("name").classList.add("error")
       document.getElementById("name").focus()
     } else {
       document.getElementById("name").classList.remove("error")
     }
-
-    // Show errors
-    let errorDiv = document.getElementById("form-errors")
-    if (!errorDiv) {
-      errorDiv = document.createElement("div")
-      errorDiv.id = "form-errors"
-      errorDiv.style.color = "red"
-      form.prepend(errorDiv)
-    }
-    errorDiv.innerHTML = messages.join("<br>")
 
     if (!valid) {
       e.preventDefault()
