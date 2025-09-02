@@ -1,23 +1,24 @@
 const sections = document.querySelectorAll("section")
 const progressBar = document.getElementById("myBar")
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const index = Array.from(sections).indexOf(entry.target)
-        const progress = (index / sections.length) * 130
-        progressBar.style.width = progress + "%"
-      }
-    })
-  },
-  {
-    threshold: 0.5, // 50% della sezione deve essere visibile per triggerare
-  }
-)
+if (progressBar) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = Array.from(sections).indexOf(entry.target)
+          const progress = (index / sections.length) * 130
+          progressBar.style.width = progress + "%"
+        }
+      })
+    },
+    {
+      threshold: 0.5, // 50% della sezione deve essere visibile per triggerare
+    }
+  )
 
-sections.forEach((section) => observer.observe(section))
-
+  sections.forEach((section) => observer.observe(section))
+}
 // Gestione del cursore personalizzato
 const cursor = document.getElementById("custom-cursor")
 
@@ -29,7 +30,7 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = `${e.clientX}px`
 })
 
-// Elementi che attivano l'hover
+/* // Elementi che attivano l'hover
 const hoverElements = document.querySelectorAll(
   "button, a, .hover-target, ul, li, .dropdown, .dropdown *"
 )
@@ -42,7 +43,7 @@ hoverElements.forEach((el) => {
   el.addEventListener("mouseleave", () => {
     cursor.classList.remove("hover")
   })
-})
+}) */
 
 // Gestione speciale per il dropdown
 // const dropdownButton = document.getElementById("dropdownNavbarLink");
