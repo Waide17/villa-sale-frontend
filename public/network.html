@@ -35,7 +35,7 @@
                     </li>
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            class="flex items-center justify-between w-full py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-yellow-400 md:p-0 md:w-auto dark:text-white md:dark:text-yellow-400">
+                            class="flex items-center justify-between block py-2 px-3 text-white rounded-sm transition-colors hover:text-blue-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-yellow-400 md:dark:hover:bg-transparent">
                             La villa
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
@@ -48,7 +48,8 @@
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
                                 aria-labelledby="dropdownLargeButton">
                                 <li>
-                                    <a href="#" class="block px-4 py-2 dark:bg-gray-600 dark:text-white">Esplora gli
+                                    <a href="details_interni.html"
+                                        class="block px-4 py-2 dark:hover:bg-gray-600 dark:hover:text-white">Esplora gli
                                         interni</a>
                                 </li>
                                 <li>
@@ -60,9 +61,10 @@
                         </div>
                     </li>
                     <li>
-                        <a href="network.html"
-                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Rete
-                            Locale</a>
+                        <a href="#"
+                            class="flex items-center justify-between w-full py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-yellow-400 md:p-0 md:w-auto dark:text-white md:dark:text-yellow-400">
+                            Rete Locale
+                        </a>
                     </li>
                     <li>
                         <a href="prices.html"
@@ -94,8 +96,8 @@
                         class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                         Piano Terra
                     </h2>
-                    <img src="../media/primo_piano.drawio.svg" alt="Schema Piano Terra"
-                        class="w-full shadow" onclick="openFullscreen(this.src)">
+                    <img src="../media/p0_finale.drawio.svg" alt="Schema Piano Terra" class="w-full shadow"
+                        onclick="openFullscreen(this.src)">
                 </div>
                 <!-- Primo Piano -->
                 <div class="flex flex-col items-center bg-gray-900 rounded-lg shadow-lg p-6">
@@ -103,34 +105,40 @@
                         class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                         Primo Piano
                     </h2>
-                    <img src="../media/secondo_piano.drawio.svg" alt="Schema Primo Piano"
-                        class="w-full shadow mb-2" onclick="openFullscreen(this.src)">
+                    <img src="../media/p1_finale.drawio.svg" alt="Schema Primo Piano" class="w-full shadow mb-2"
+                        onclick="openFullscreen(this.src)">
                 </div>
             </div>
         </section>
 
-        <div id="imageModal"
-            class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
-            <img id="modalImage" src="" alt="Fullscreen" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+        <section class="w-full max-w-4xl mx-auto mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Legenda Piano Terra -->
+                <section class="max-w-2xl w-full bg-gray-800 rounded-lg shadow-lg p-8 mx-auto h-fit">
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>Router</li>
+                        <li>Switch 16 porte con patch panel 16 porte</li>
+                        <li>Access Point</li>
+                        <li>9 TO totali</li>
+                    </ul>
+                </section>
+                <!-- Legenda Primo Piano -->
+                <section class="max-w-2xl w-full bg-gray-800 rounded-lg shadow-lg p-8 mx-auto h-fit">
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>Switch 16 porte con patch panel 16 porte</li>
+                        <li>Access Point</li>
+                        <li>12 TO totali</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+        <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+            <img id="modalImage" src="" alt="Fullscreen" class="max-h-[90vh] max-w-[90vw] shadow-lg">
             <button onclick="closeFullscreen()"
                 class="absolute top-6 right-8 text-white text-3xl font-bold">&times;</button>
         </div>
 
-        <section class="max-w-2xl w-full bg-gray-800 rounded-lg shadow-lg p-8 mx-auto">
-            <h2 class="text-2xl font-bold mb-4 text-center">Legenda</h2>
-            <ul class="list-disc list-inside text-lg space-y-2">
-                <li><span class="font-semibold text-yellow-400">Router:</span> Punto di accesso principale alla rete
-                    Internet.</li>
-                <li><span class="font-semibold text-blue-400">Switch:</span> Smista la connessione tra i dispositivi di
-                    ciascun piano.</li>
-                <li><span class="font-semibold text-green-400">Access Point:</span> Diffonde la rete Wi-Fi su ogni
-                    piano.</li>
-                <li><span class="font-semibold text-purple-400">AP Esterno:</span> Access point aggiuntivo per aree
-                    esterne.</li>
-                <li><span class="font-semibold text-gray-300">PC/TV:</span> Dispositivi connessi alla rete cablata o
-                    Wi-Fi.</li>
-            </ul>
-        </section>
         <div id="custom-cursor"></div>
     </div>
     <script src="../js/index.js"></script>
