@@ -90,20 +90,31 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Piano Terra -->
                 <div class="flex flex-col items-center bg-gray-900 rounded-lg shadow-lg p-6">
-                    <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                    <h2
+                        class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                         Piano Terra
                     </h2>
-                    <img src="../media/primo_piano.drawio.svg" alt="Schema Piano Terra" class="w-full max-w-xs rounded-md shadow mb-2">
+                    <img src="../media/primo_piano.drawio.svg" alt="Schema Piano Terra"
+                        class="w-full shadow" onclick="openFullscreen(this.src)">
                 </div>
                 <!-- Primo Piano -->
                 <div class="flex flex-col items-center bg-gray-900 rounded-lg shadow-lg p-6">
-                    <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                    <h2
+                        class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                         Primo Piano
                     </h2>
-                    <img src="../media/secondo_piano.drawio.svg" alt="Schema Primo Piano" class="w-full max-w-xs rounded-md shadow mb-2">
+                    <img src="../media/secondo_piano.drawio.svg" alt="Schema Primo Piano"
+                        class="w-full shadow mb-2" onclick="openFullscreen(this.src)">
                 </div>
             </div>
         </section>
+
+        <div id="imageModal"
+            class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+            <img id="modalImage" src="" alt="Fullscreen" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+            <button onclick="closeFullscreen()"
+                class="absolute top-6 right-8 text-white text-3xl font-bold">&times;</button>
+        </div>
 
         <section class="max-w-2xl w-full bg-gray-800 rounded-lg shadow-lg p-8 mx-auto">
             <h2 class="text-2xl font-bold mb-4 text-center">Legenda</h2>
@@ -123,9 +134,7 @@
         <div id="custom-cursor"></div>
     </div>
     <script src="../js/index.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script src="../js/details_interni.js"></script>
 </body>
 
 </html>
