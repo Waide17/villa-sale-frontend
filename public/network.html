@@ -133,6 +133,53 @@
             </div>
         </section>
 
+        <section class="w-full max-w-4xl mx-auto mb-16">
+            <div class="bg-gray-800 rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-4 text-center">VLAN presenti nella struttura</h2>
+                <ul class="list-disc list-inside text-lg space-y-4">
+                    <li>
+                        <span class="font-semibold text-yellow-400">VLAN 10 — Staff</span><br>
+                        <span class="font-semibold">Uso:</span> PC, laptop, dispositivi di lavoro, smart TV che devono
+                        comunicare con server locali.
+                    </li>
+                    <li>
+                        <span class="font-semibold text-yellow-400">VLAN 20 — Wi-Fi ospiti</span><br>
+                        <span class="font-semibold">Uso:</span> dispositivi ospiti
+                    </li>
+                    <li>
+                        <span class="font-semibold text-yellow-400">VLAN 30 — Altri dispositivi</span><br>
+                        <span class="font-semibold">Uso:</span> videocitofono, IP-cam, smart plugs, frigo, speaker.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="w-full max-w-4xl mx-auto mb-16">
+            <div class="bg-gray-800 rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold mb-4 text-center">Piano di indirizzamento</h2>
+                <ul class="list-disc list-inside text-lg space-y-4">
+                    <li>
+                        <span class="font-semibold text-yellow-400">VLAN 10 — Staff</span><br>
+                        <span class="font-semibold">Network:</span> 10.10.10.0/24<br>
+                        <span class="font-semibold">Gateway:</span> 10.10.10.1<br>
+                        <span class="font-semibold">Broadcast:</span> 10.10.10.255
+                    </li>
+                    <li>
+                        <span class="font-semibold text-yellow-400">VLAN 20 — Wi-Fi ospiti</span><br>
+                        <span class="font-semibold">Network:</span> 10.10.20.0/24<br>
+                        <span class="font-semibold">Gateway:</span> 10.10.20.1<br>
+                        <span class="font-semibold">Broadcast:</span> 10.10.20.255
+                    </li>
+                    <li>
+                        <span class="font-semibold text-yellow-400">VLAN 30 — Altri dispositivi</span><br>
+                        <span class="font-semibold">Network:</span> 10.10.30.0/24<br>
+                        <span class="font-semibold">Gateway:</span> 10.10.30.1<br>
+                        <span class="font-semibold">Broadcast:</span> 10.10.30.255
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
             <img id="modalImage" src="" alt="Fullscreen" class="max-h-[90vh] max-w-[90vw] shadow-lg">
             <button onclick="closeFullscreen()"
