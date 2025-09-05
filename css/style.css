@@ -1,4 +1,5 @@
 /* Scroll snap container */
+
 body,
 html {
     cursor: none;
@@ -40,7 +41,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .snap-section {
     height: 100vh;
     scroll-snap-align: start;
@@ -74,11 +74,9 @@ html {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
